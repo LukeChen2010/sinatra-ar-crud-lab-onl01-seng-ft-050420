@@ -21,16 +21,13 @@ class ApplicationController < Sinatra::Base
   
   get '/articles/:id' do
     id = params[:id]
-    article = Article.find(id)
-    @articles = []
-    @articles << article
+    @article = Article.find(id)
     erb :show
   end
   
   get '/articles' do
-    @articles = []
     @articles = Article.all
-    erb :show
+    erb :index
   end
   
   get '/articles/:id/edit' do
