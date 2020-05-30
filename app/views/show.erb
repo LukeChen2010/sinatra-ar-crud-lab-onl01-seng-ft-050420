@@ -1,7 +1,5 @@
-<% @articles.each do |x|%>
-  <h1><%=x.title %></h1>
-  <p><%=x.content %></p>
-<%end%>
+<h1><%=@article.title %></h1>
+<p><%=@article.content %></p>
 
 <form method="POST" action="/articles/<%=@article.id%>">
   <input id="hidden" type="hidden" name="_method" value="delete">
