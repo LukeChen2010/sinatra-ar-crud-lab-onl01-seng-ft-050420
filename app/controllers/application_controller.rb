@@ -46,9 +46,7 @@ class ApplicationController < Sinatra::Base
   
   delete '/articles/:id' do
     id = params[:id]
-    puts Article.count
     Article.delete(params[:id])
-    puts Article.count
   end
   
 end
